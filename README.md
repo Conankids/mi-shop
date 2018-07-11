@@ -1,4 +1,4 @@
-# demo3
+# mi-shop
 
 > A Vue.js project
 
@@ -19,6 +19,7 @@ npm run build --report
 
 # 启动服务器
 cd server
+npm install
 npm start
 启动之前需要把routes/goods.js里面的数据库地址更改为自己的地址 
 ```
