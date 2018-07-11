@@ -1,0 +1,24 @@
+{
+  "status": "0",
+  "message": "success",
+  "result": [
+    {
+      "productId": "100001",
+      "productName": "音箱",
+      "productPrice": "199",
+      "productImg": "1.jpg"
+    },
+    {
+      "productId": "100002",
+      "productName": "小米6",
+      "productPrice": "1999",
+      "productImg": "2.jpg"
+    },
+    {
+      "productId": "100003",
+      "productName": "xxx",
+      "productPrice": "299",
+      "productImg": "3.jpg"
+    }
+  ]
+}
