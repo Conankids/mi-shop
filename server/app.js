@@ -4,6 +4,7 @@ var path = require('path');//路径（放在哪就是当前路径）
 var cookieParser = require('cookie-parser');//cookie解析插件
 var logger = require('morgan');//日志插件
 var ejs = require('ejs')
+var favicon = require('express-favicon')
 
 require('./utils/util')
 
@@ -24,6 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(path.join(__dirname,'../public/images/favicon.ico')));
 
 app.use((req, res, next) => {
     if (req.cookies.userId) {

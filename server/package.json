@@ -10,6 +10,8 @@
     "debug": "~2.6.9",
     "ejs": "^2.6.1",
     "express": "~4.16.0",
+    "express-favicon": "^2.0.1",
+    "favicon": "0.0.2",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
     "mongoose": "^5.1.7",
