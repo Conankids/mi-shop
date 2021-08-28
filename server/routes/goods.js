@@ -5,7 +5,7 @@ const users = require('../models/users')
 
 const router = express.Router()
 
-mongoose.connect('mongodb://140.143.234.88:27017/db_demo')
+mongoose.connect('mongodb://120.48.25.202:27017/db_demo')
 
 mongoose.connection.on('connected', () => {
     console.log('MongoDb connected successful!')
@@ -57,7 +57,7 @@ router.get('/list', (req, res, next) => {
     }
 
     const goodsModel = goods.find(params).skip(skip).limit(pageSize) //查询后跳过多少条限制一页多少条，返回计算后的模型
-    goodsModel.sort({'salePrice': sort}) //对模型进行排序
+    goodsModel.sort({ 'salePrice': sort }) //对模型进行排序
     goodsModel.exec((err, doc) => {
         if (err) {
             res.json({
@@ -84,7 +84,7 @@ router.post('/addCart', (req, res, next) => {
     let userProductId = ''
 
     //查询user表
-    users.findOne({userId: userId}, (err1, userDoc) => {
+    users.findOne({ userId: userId }, (err1, userDoc) => {
         if (err1) {
             res.json({
                 status: -1,
@@ -117,7 +117,7 @@ router.post('/addCart', (req, res, next) => {
                     })
                 } else {
                     //未添加的查询goods表信息
-                    goods.findOne({productId: productId}, (err3, goodsDoc) => {
+                    goods.findOne({ productId: productId }, (err3, goodsDoc) => {
                         if (err3) {
                             res.json({
                                 status: -1,
